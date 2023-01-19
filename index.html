@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sections with fieldsets</title>
+    <style>
+        *{
+            /* margin:0;
+            padding:0; */
+            box-sizing: border-box;
+        }
+        body{
+            background:#f1f1f1;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+
+
+        fieldset{
+            /* color:green; */
+            /* background:black; */
+            border-radius: 4.2px;
+        }
+        .nav ul{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            width:80%;
+            margin:auto;
+            /* grid-template-rows: repeat(auto, 1000px); */
+        }
+        li{
+            list-style: none;
+            /* border:1px solid black; */
+        }
+        li:hover{
+            list-style:circle;
+        }
+        li.selected{
+            list-style: square;
+        }
+        input{
+            width:100%;
+        }
+
+        .c2{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .c2-20-80{
+            display:grid;
+            grid-template-columns: 1fr 4fr;
+        }
+
+        /* .all-notes li{
+            
+            border-bottom: 1px solid gray;
+        } */
+
+        .nav li{
+            cursor:pointer;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <!-- <legend>adsf</legend> -->
+    <section id="wrapper">
+        <fieldset class="header">
+            <legend>Notulist.app</legend>
+            <h1>The world greatest</h1>
+        </fieldset>
+        <fieldset class="nav">
+            <legend>Menu</legend>
+            <ul>
+                <!-- <li class="selected" >Home</li>
+                <li>search & add log</li> -->
+            </ul>
+        </fieldset>
+        <main>
+            <fieldset id="index-page">
+                <legend>Dashboard</legend>
+                    <input type="text" placeholder="search">
+             
+                <div class="c2-20-80">
+                    <fieldset>
+                        <legend>Books</legend>
+                        <ul class="all-books">
+                            <li>Tasks</li>
+                            <li>School</li>
+                            <li>Daily</li>
+                            <li class="selected">Sport</li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>notes</legend>
+                        <ul class="all-notes">
+                            <hr>
+                            <li>
+                                <p class="date">2023118 </p>
+                                <p>Pullups</p>
+                            </li>
+                            <hr>
+                            <li>
+                                <p class="date">Game </p>
+                                <p>Pullups</p>
+                            </li>
+                            <hr>
+                            <li>
+                                <p class="date">2023118 </p>
+                                <p>Pullups</p>
+                            </li>
+                            <hr>
+                        </ul>
+                    </fieldset>
+                </div>
+            </fieldset>
+            <fieldset id="add-note-page">
+                <legend>Add Note</legend>
+            </fieldset>
+            <fieldset id="test-page">
+                <legend>test</legend>
+            </fieldset>
+        </main>
+    </section>
+
+
+    <script src="js/navigation.js"></script>
+
+</body>
+</html>
